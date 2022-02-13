@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "364845494511",
+    "project_id": "report-tools",
+    "storage_bucket": "report-tools.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364845494511:android:a144cff3431fb464532b1a",
+        "android_client_info": {
+          "package_name": "com.phucdeveloper.report_tools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364845494511-fqganf2jd31iu8sq87ceqjsjad11avim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBITOlhCcVQlX3Gfmexzxf7ddym24ZkTqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364845494511-fqganf2jd31iu8sq87ceqjsjad11avim.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
