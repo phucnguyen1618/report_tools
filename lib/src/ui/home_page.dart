@@ -1,4 +1,3 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:report_tools/src/blocs/home_bloc.dart';
 import 'package:report_tools/src/models/sheets_response.dart';
@@ -12,14 +11,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-  final FirebaseMessaging messaging = FirebaseMessaging.instance;
-
   @override
-  void initState() async {
+  void initState() {
     super.initState();
     homeBloc.fetchAllData();
-
   }
 
   @override
@@ -39,6 +34,14 @@ class _HomePageState extends State<HomePage> {
             color: Colors.white,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              homeBloc.fetchAllData();
+            },
+            icon: const Icon(Icons.refresh),
+          )
+        ],
       ),
       body: StreamBuilder(
         stream: homeBloc.sheetDataStream,
@@ -57,8 +60,7 @@ class _HomePageState extends State<HomePage> {
               ),
             );
           }
-          return const Center(
-            child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         },
       ),
     );

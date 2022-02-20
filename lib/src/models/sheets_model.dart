@@ -10,11 +10,4 @@ class SheetsModel {
     this.thingsToday,
     this.difficulty,
   });
-
-  SheetsModel.fromJson(Map<String, String> json) {
-    dateTime = json['dateTime'];
-    thingsYesterday = json['things_yesterday'];
-    thingsToday = json['things_today'];
-    difficulty = json['difficulty'];
-  }
 }

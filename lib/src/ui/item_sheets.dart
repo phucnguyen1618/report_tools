@@ -10,27 +10,31 @@ class ItemSheets extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
-        sheetsModel.thingsYesterday.toString(),
+        sheetsModel.thingsToday.toString().toUpperCase().trim(),
         style: const TextStyle(
           fontSize: 16.0,
           color: Colors.black,
           fontWeight: FontWeight.bold,
         ),
       ),
-      subtitle: Text(
-        sheetsModel.thingsToday.toString(),
-        style: const TextStyle(
-          fontSize: 14.0,
-          color: Colors.grey,
-        ),
-      ),
-      trailing: Text(
-        sheetsModel.dateTime.toString(),
-        style: const TextStyle(
-          fontSize: 14.0,
-          color: Colors.grey,
-          fontWeight: FontWeight.bold,
-        ),
+      subtitle: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            sheetsModel.dateTime.toString(),
+            style: const TextStyle(
+              fontSize: 14.0,
+              color: Colors.grey,
+            ),
+          ),
+          Text(
+            sheetsModel.thingsYesterday.toString().trim(),
+            style: const TextStyle(
+              fontSize: 14.0,
+              color: Colors.grey,
+            ),
+          ),
+        ],
       ),
     );
   }
